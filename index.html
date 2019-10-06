@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>nlmhc - 资源索引</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body {color:#FFFFFF}
+	bg{
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+	contents{
+		position: absolute;
+		left: 20%;
+		top: 30%;
+		height: 30%;
+		width: 40%;
+		text-shadow: 0px 0px 25px #000;
+	}
+	div.divbk{
+		background: #000000;
+		/* for IE */
+		filter: alpha(opacity=90);
+		/* CSS3 standard */
+		opacity: 0.9;
+	}
+	div.divcount{
+		background: #FFFFFF;
+		color: #000000;
+		width: 100px;
+		height: 30px;
+		border-radius:8px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 30px;
+		/* for IE */
+		filter: alpha(opacity=80);
+		/* CSS3 standard */
+		opacity: 0.8;
+	}
+	img.kotori{
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 300px;
+		height: 300px;
+		padding-top: 300px;
+		line-height: 30px;
+	}
+	a.button{
+		display: block;
+		background-color: #DCDCDC;
+		color: #000000;
+		width: 100px;
+		height: 30px;
+		border-radius: 8px;
+		text-align: center;
+		text-decoration: none;
+		line-height: 30px;
+		/* for IE */
+		filter: alpha(opacity=80);
+		/* CSS3 standard */
+		opacity: 0.8;
+	}
+	a:hover,a:active{
+		background-color: #2F9CFF;
+		color: #FFFFFF;
+	}
+	::-webkit-scrollbar {
+		display: none;
+	}
+	</style>
+	<link rel="icon" href="/icon.ico">
+</head>
+
+<body bgcolor="#000000">
+	<audio autoplay loop preload="auto" id="bg_audio">
+		<source src="http://music.163.com/song/media/outer/url?id=458496962" type="audio/mpeg">
+	</audio>
+	<div class="divbk">
+		<bg>
+			<iframe id="bg_demo" src="/demo.html" width="100%" height="100%" frameborder="0"></iframe>
+			<!-- <video muted data-autoplay autoplay loop preload width="100%" height="100%" style="object-fit:fill" id="bg_video" data-object-fit> -->
+				<!-- <source src="/233.gif" type="video/mp4" /> -->
+			<!-- </video> -->
+		</bg>
+	</div>
+	<img class="kotori" src="/LL_kotori_left.png"/>
+	<bg>
+	<contents>
+		<h1 style="font-size:40px;padding-bottom:40px;padding-left:10px">资源索引</h1>
+			<h3 style="padding-left:10px">软件列表</h3>
+			<table style="padding-bottom:20px" border="0" cellspacing="10">
+				<tr>
+					<td align="left"><a class="button" href="/nlplayer/">NLPlayer</a></td>
+					<td align="left"><a class="button" href="/darkbili/">DarkBili</a></td>
+					<td align="left"><a class="button" href="#">千千随心听</a></td>
+				</tr>
+			</table>
+			<h3 style="padding-left:10px">网站功能</h3>
+			<table style="padding-bottom:20px" border="0" cellspacing="10">
+				<tr>
+					<td align="left"><a class="button" onclick="bgAuControl()" href="#" id="AuSwitch">打开BGM</a></td>
+				</tr>
+			</table>
+		<p style="padding-top:10px;padding-left:10px">© 2019 <a href="/" title="nlmhc"><font color="#00CCFF">nlmhc</font></a>. 版权所有.</p>
+	</contents>
+	</bg>
+	<script>
+		bgAid=document.getElementById("bg_audio");
+		bt=document.getElementById("AuSwitch");
+		function bgAuControl()
+		{
+			if (bgAid.paused)
+			{
+			bgAid.play();
+			bt.innerHTML="关闭BGM";
+			}
+			else
+			{
+			bgAid.pause();
+			bt.innerHTML="打开BGM";
+			}
+		}
+	</script> 
+</body>
+</html>
