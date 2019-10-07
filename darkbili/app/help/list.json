@@ -1,0 +1,16 @@
+{
+	"data": [
+		{
+			"title": "常见问题(FAQ)",
+			"file": "help_faq.html"
+		},
+		{
+			"title": "打开支持",
+			"file": "help_open.html"
+		},
+		{
+			"title": "按键说明",
+			"file": "help_key.html"
+		}
+	]
+}
