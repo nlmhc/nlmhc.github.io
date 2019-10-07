@@ -1,0 +1,70 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#container{
+		height: 100%;
+		width: 100%;
+		background: #323232;
+	}
+	.divkey{
+		background: #6E6E6E;
+		width: 35px;
+		height: 35px;
+		border-radius:10px;
+		text-align: center;
+		line-height: 35px;
+    }
+	key{
+		position: relative;
+        left: 10px;
+        top: 10px;
+    }
+	::-webkit-scrollbar {
+	    width: 5px;
+	    height: 5px;
+	}
+	li {display:inline}
+	::-webkit-scrollbar-button:vertical:start:increment,
+	::-webkit-scrollbar-button:vertical:end:decrement {
+	    display: none;
+	}
+	::-webkit-scrollbar-track-piece:vertical:start {
+	    background-color: #323232;
+	}
+	::-webkit-scrollbar-track-piece:vertical:end {
+	    background-color: #323232;
+	}
+	::-webkit-scrollbar-thumb:vertical {
+	    border-radius: 7px;
+	    background-color: rgb(94,94,94);
+	}
+	::-webkit-scrollbar:horizontal {
+	    display: none;
+	}
+	</style>
+</head>
+<body bgcolor="#323232">
+	<div id="container">
+	    <font face="微软雅黑" color="#FFFFFF" size="2">		    
+			<h3>按键说明</h3>
+				<table border="0" cellspacing="20">
+					<tr>
+						<td><div class="divkey">F11</div>全屏</td>
+						<td><div class="divkey">↑</div>音量加5%</td>
+						<td><div class="divkey">↓</div>音量减5%</td>
+					</tr>   
+					<tr>	
+						<td><div class="divkey">空格</div>播放/暂停</td>
+						<td><div class="divkey">←</div>快退5秒</td>
+						<td><div class="divkey">→</div>快进5秒</td>
+					</tr>
+				</table>
+	    </font>
+	</div>
+</body>
+</html>
