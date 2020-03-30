@@ -77,8 +77,14 @@
 	::-webkit-scrollbar {
 		display: none;
 	}
+	html {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
 	</style>
 	<link rel="icon" href="/icon.ico">
+	<link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body bgcolor="#000000">
@@ -113,6 +119,23 @@
 			</table>
 		<p style="padding-top:10px;padding-left:10px">© 2019 <a href="/" title="nlmhc"><font color="#00CCFF">nlmhc</font></a>. 版权所有.</p>
 	</contents>
+	<div class="waifu" style="right: 30px;">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+        
+    <script src="assets/waifu-tips.js"></script>
+    <script src="assets/live2d.js"></script>
+    <script type="text/javascript">initModel("assets/")</script>
 	</bg>
 	<script>
 		bgAid=document.getElementById("bg_audio");
