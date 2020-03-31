@@ -93,9 +93,6 @@
 </head>
 
 <body bgcolor="#000000">
-	<audio autoplay loop preload="auto" id="bg_audio">
-		<source src="http://music.163.com/song/media/outer/url?id=458496962" type="audio/mpeg">
-	</audio>
 	<div class="divbk">
 		<bg>
 			<iframe id="bg_demo" src="/demo.html" width="100%" height="100%" frameborder="0"></iframe>
@@ -104,7 +101,6 @@
 			<!-- </video> -->
 		</bg>
 	</div>
-	<img class="kotori" src="/LL_kotori_left.png"/>
 	<bg>
 	<contents>
 		<h1 style="font-size:40px;padding-bottom:40px;padding-left:10px">资源索引</h1>
@@ -116,15 +112,9 @@
 					<td align="left"><a class="button" href="#">千千随心听</a></td>
 				</tr>
 			</table>
-			<h3 style="padding-left:10px">网站功能</h3>
-			<table style="padding-bottom:20px" border="0" cellspacing="10">
-				<tr>
-					<td align="left"><a class="button" onclick="bgAuControl()" href="#" id="AuSwitch">打开BGM</a></td>
-				</tr>
-			</table>
 		<p style="padding-top:10px;padding-left:10px">© 2019 <a href="/" title="nlmhc"><font color="#00CCFF">nlmhc</font></a>. 版权所有.</p>
 	</contents>
-	<iframe class="player" frameborder="no" border="0" marginwidth="0" marginheight="0" width=370 height=110 src="//music.163.com/outchain/player?type=0&id=442538213&auto=0&height=90"></iframe>
+	<iframe class="player" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="https://music.163.com/outchain/player?type=0&id=4943689914&auto=0&height=90"></iframe>
 	<div class="waifu" style="right: 30px;">
         <div class="waifu-tips"></div>
         <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
@@ -143,23 +133,7 @@
     <script src="assets/live2d.js"></script>
     <script type="text/javascript">initModel("assets/")</script>
 	</bg>
-	<script>
-		bgAid=document.getElementById("bg_audio");
-		bt=document.getElementById("AuSwitch");
-		function bgAuControl()
-		{
-			if (bgAid.paused)
-			{
-			bgAid.play();
-			bt.innerHTML="关闭BGM";
-			}
-			else
-			{
-			bgAid.pause();
-			bt.innerHTML="打开BGM";
-			}
-		}
-	</script> 
+	<img class="kotori" src="/LL_kotori_left.png"/>
 	<script src="/statistics.js"></script>
 </body>
 </html>
