@@ -74,10 +74,12 @@
 		background-color: #2F9CFF;
 		color: #FFFFFF;
 	}
-	.player{
+	.player-ui{
 		position: absolute;
 		bottom: 10px;
+		width: 320px;
 		left: 20px;
+		color: #000;
 	}
 	::-webkit-scrollbar {
 		display: none;
@@ -87,15 +89,17 @@
         scrollbar-width: none;
     }
 	</style>
-	<link rel="icon" href="/icon.ico">
+	<link rel="icon" href="assets/icon.ico">
 	<link rel="stylesheet" type="text/css" href="assets/waifu.css"/>
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
 </head>
 
 <body bgcolor="#000000">
 	<div class="divbk">
 		<bg>
-			<iframe id="bg_demo" src="/demo.html" width="100%" height="100%" frameborder="0"></iframe>
+			<iframe id="bg_demo" src="demo.html" width="100%" height="100%" frameborder="0"></iframe>
 			<!-- <video muted data-autoplay autoplay loop preload width="100%" height="100%" style="object-fit:fill" id="bg_video" data-object-fit> -->
 				<!-- <source src="/233.gif" type="video/mp4" /> -->
 			<!-- </video> -->
@@ -107,17 +111,19 @@
 			<h3 style="padding-left:10px">APP</h3>
 			<table style="padding-bottom:20px" border="0" cellspacing="10">
 				<tr>
-					<td align="left"><a class="button" href="/nlplayer/">NLPlayer</a></td>
-					<td align="left"><a class="button" href="/darkbili/">DarkBili</a></td>
-					<td align="left"><a class="button" href="#">千千随心听</a></td>
+					<td align="left"><a class="button" href="/nlplayer/" target="_blank">NLPlayer</a></td>
+					<td align="left"><a class="button" href="/darkbili/" target="_blank">DarkBili</a></td>
 				</tr>
 			</table>
 		<p style="padding-top:10px;padding-left:10px">© 2020 <a href="/" title="nlmhc"><font color="#00CCFF">nlmhc</font></a>. 版权所有.</p>
 	</contents>
-	<iframe class="player" frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="https://music.163.com/outchain/player?type=0&id=4943689914&auto=0&height=90"></iframe>
-	<div class="waifu" style="right: 30px;">
+	<div class="player-ui">
+		<div id="player">
+		</div>
+	</div>
+	<div class="waifu">
         <div class="waifu-tips"></div>
-        <canvas id="live2d" width="540" height="510" class="live2d"></canvas>
+        <canvas id="live2d" class="live2d"></canvas>
         <div class="waifu-tool">
             <span class="fui-home"></span>
             <span class="fui-chat"></span>
@@ -127,13 +133,15 @@
             <span class="fui-info-circle"></span>
             <span class="fui-cross"></span>
         </div>
-    </div>
-        
+    </div>      
     <script src="assets/waifu-tips.js"></script>
     <script src="assets/live2d.js"></script>
-    <script type="text/javascript">initModel("assets/")</script>
+    <script type="text/javascript">
+		initModel("assets/")
+	</script>
+	<script src="assets/player.js"></script>
 	</bg>
-	<img class="kotori" src="/LL_kotori_left.png"/>
-	<script src="/statistics.js"></script>
+	<img class="kotori" src="assets/LL_kotori_left.png"/>
+	<script src="assets/statistics.js"></script>
 </body>
 </html>
