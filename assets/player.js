@@ -5,6 +5,7 @@ var ap = new APlayer
 			autoplay: true,
 			showlrc: false,
 			fixed: false,
+			listFolded: true,
 			listMaxHeight: 90,
 			music: [
 					{
