@@ -74,7 +74,6 @@ var _0x28b4 = function (_0x13bae1, _0x307661) {
 	}
 	return _0x17367d;
 };
-console['log']('©\x202020\x20Ruoxin\x20Mao.\x20All\x20Rights\x20Reserved.');
 const inputContent = [window[atob(_0x28b4('0x0', 'z3Ud'))], _0x28b4('0x1', '9WsM')];
 const ua = navigator['userAgent']['toLowerCase']();
 const isSafari = ua['indexOf'](_0x28b4('0x2', 'wDzD')) != -0x1 && ua[_0x28b4('0x3', 'sMKB')](_0x28b4('0x4', 'i1SP')) == -0x1;
@@ -90,11 +89,7 @@ let pureResultWithoutTitle;
 window['oncontextmenu'] = () => {
 	return ![];
 };
-if (inputContent[0x0][atob(inputContent[0x1])][_0x28b4('0x9', 'jBRV')](atob(_0x28b4('0xa', 'ODWp'))) == -0x1) {
-	inputContent[0x0][atob(inputContent[0x1])] = atob(_0x28b4('0xb', '75oT'));
-} else {
-	inputContent[_0x28b4('0xc', 'Mne2')] = 0x0;
-}
+
 inputMain[_0x28b4('0xd', 'YBhG')] = () => {
 	var _0x1ffbfc = {
 		'zEYYW': function _0x530c81(_0xa0e456, _0xe8a73a) {
